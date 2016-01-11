@@ -11,6 +11,7 @@ def read_in_file(filename):
         line = line.strip() #removes whitespace 
         test_line = line.split(" ") 
         for word in test_line:
+            word = word.lower() 
             if word in text_dic:    #if word in line of text, add it to our dictionary.
                 text_dic[word] += 1 #increment by one each time word appears in each line.
             else:
